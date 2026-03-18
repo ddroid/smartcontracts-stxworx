@@ -1,0 +1,53 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://stacks-node-api.testnet.stacks.co"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: escrow-multi-token
+            expected-sender: ST1KXQWTVF3BB592WRRMFTJZM4TGD434W29NPKY0T
+            cost: 407450
+            path: contracts/escrow-multi-token.clar
+            anchor-block-only: true
+            clarity-version: 4
+        - contract-publish:
+            contract-name: escrow-multi-token-v7
+            expected-sender: ST1KXQWTVF3BB592WRRMFTJZM4TGD434W29NPKY0T
+            cost: 407450
+            path: contracts/escrow-multi-token-v7.clar
+            anchor-block-only: true
+            clarity-version: 4
+        - contract-publish:
+            contract-name: rep-sft
+            expected-sender: ST1KXQWTVF3BB592WRRMFTJZM4TGD434W29NPKY0T
+            cost: 130230
+            path: contracts/rep-sft.clar
+            anchor-block-only: true
+            clarity-version: 4
+        - contract-publish:
+            contract-name: stxworks-escrow-v8
+            expected-sender: ST1KXQWTVF3BB592WRRMFTJZM4TGD434W29NPKY0T
+            cost: 55210
+            path: contracts/stxworks-escrow-v8.clar
+            anchor-block-only: true
+            clarity-version: 4
+        - contract-publish:
+            contract-name: stxworx-badge
+            expected-sender: ST1KXQWTVF3BB592WRRMFTJZM4TGD434W29NPKY0T
+            cost: 130230
+            path: contracts/stxworx-badge.clar
+            anchor-block-only: true
+            clarity-version: 4
+        - contract-publish:
+            contract-name: verify-soulbound
+            expected-sender: ST1KXQWTVF3BB592WRRMFTJZM4TGD434W29NPKY0T
+            cost: 130230
+            path: contracts/verify-soulbound.clar
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "3.3"
